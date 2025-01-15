@@ -1,0 +1,148 @@
+/* Genel stil ve ortalama düzeltmeler */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    transition: background-color 2s;
+}
+
+#container {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    transition: opacity 1s;
+}
+
+#buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#yesButton, #noButton {
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+/* Hayır butonu kırmızı, Evet butonu yeşil olacak */
+#yesButton {
+    background-color: #32CD32;
+    color: white;
+}
+
+#noButton {
+    background-color: #FF6347;
+    color: white;
+}
+
+#yesButton:hover, #noButton:hover {
+    opacity: 0.8;
+}
+
+/* Resimler ve animasyonlar */
+#berkantImage, #yeterImage {
+    position: absolute;
+    top: 50%; /* Y ekseninde ortalama */
+    left: 50%; /* X ekseninde ortalama */
+    transform: translate(-50%, -50%); /* Hem X hem Y ekseninde merkezde olacak */
+    width: 200px;
+    height: 250px;
+    display: none;
+    transition: all 2s ease;
+}
+/* Berkant solda, Yeter sağda olacak */
+#berkantImage {
+    transform: translateX(-100%);
+}
+
+#yeterImage {
+    transform: translateX(100%);
+}
+
+#yeterImage {
+    transform: translateX(0%);
+}
+
+
+/* Kalp hareketleri için animasyon */
+@keyframes moveHeart {
+    0% { 
+        transform: translate(var(--start-x), var(--start-y)) scale(1); /* Başlangıç pozisyonu rastgele */
+        opacity: 1;
+    }
+    100% { 
+        transform: translate(var(--end-x), var(--end-y)) scale(1); /* Son nokta */
+        opacity: 0; /* Kalp sonunda kaybolur */
+    }
+}
+
+/* Kalplerin animasyonu */
+.heart {
+    position: absolute;
+    transition: transform 0.1s ease-in-out;
+    pointer-events: none; /* Kalplere tıklanabilirlik ekleme */
+}
+
+
+.heart.bounce {
+    transform: scale(1.2);  /* Kalp sıçrarken ölçeklenir */
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Hav Bord Stili */
+#havBord {
+    width: 100%;
+    background-color: #00ff00a8; /* Yeşil arka plan */
+    color: white; /* Beyaz metin */
+    text-align: center;
+    padding: 3px 0; /* Yatay ve dikey padding */
+    position: fixed; /* Sayfanın üst kısmında sabit kalacak */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Diğer içeriklerin üstünde olacak şekilde */
+}
+
+#havBord h2 {
+    font-size: 24px;
+    margin: 0;
+}
+#ebrar {
+    background-color: #affa00; /* Yeşil arka plan */
+    color: rgb(31, 13, 13); /* Beyaz metin */
+    border: none; /* Kenarlık yok */
+    padding: 3px 25px; /* İç boşluk */
+    text-align: center; /* Metni ortalar */
+    text-decoration: none; /* Alt çizgi yok */
+    display: inline-block; /* Buton satır içi eleman olur */
+    font-size: 16px; /* Yazı boyutu */
+    cursor: pointer; /* İmleç değişir */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    transition: background-color 0.3s; /* Arka plan rengi geçişi */
+}
+#mercimek {
+    background-color: #affa00; /* Yeşil arka plan */
+    color: rgb(31, 13, 13); /* Beyaz metin */
+    border: none; /* Kenarlık yok */
+    padding: 3px 25px; /* İç boşluk */
+    text-align: center; /* Metni ortalar */
+    text-decoration: none; /* Alt çizgi yok */
+    display: inline-block; /* Buton satır içi eleman olur */
+    font-size: 16px; /* Yazı boyutu */
+    cursor: pointer; /* İmleç değişir */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    transition: background-color 0.3s; /* Arka plan rengi geçişi */
+}

@@ -1,0 +1,30 @@
+/* Hav Bord Stili */
+#havBord {
+    width: 100%;
+    background-color: #00ff00a8; /* Yeşil arka plan */
+    color: white; /* Beyaz metin */
+    text-align: center;
+    padding: 3px 0; /* Yatay ve dikey padding */
+    position: fixed; /* Sayfanın üst kısmında sabit kalacak */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Diğer içeriklerin üstünde olacak şekilde */
+}
+#Yeter {
+    background-color: #affa00; /* Yeşil arka plan */
+    color: rgb(31, 13, 13); /* Beyaz metin */
+    border: none; /* Kenarlık yok */
+    padding: 3px 25px; /* İç boşluk */
+    text-align: center; /* Metni ortalar */
+    text-decoration: none; /* Alt çizgi yok */
+    display: inline-block; /* Buton satır içi eleman olur */
+    font-size: 16px; /* Yazı boyutu */
+    cursor: pointer; /* İmleç değişir */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    transition: background-color 0.3s; /* Arka plan rengi geçişi */
+}
+#backgroundVideo {
+    width: 100%;  /* Genişlik, ekranın tamamını kaplar */
+    height: auto; /* Yükseklik, genişlikle orantılı olur */
+    object-fit: cover; /* Video, alanı dolduracak şekilde ölçeklenir */
+}
